@@ -14,19 +14,17 @@ kirm=[(6,0),(6,1),(6,3),(5,0),(5,2),(5,3),(4,0),(4,2),(4,3),(3,0),(3,2),(2,0),(2
 
 while True:
     banana=open("예아.txt","w",encoding="UTF-8")
-    keke=input()
-    for aa in range(6):
-        paper[aa]=paper[aa]+"=="
+    keke=input("에..음을 입력해보세요:")
     if keke in name:
         x=name.index(keke)
         print(kirm[x])
         for aa in range(6):
+            paper[aa]=paper[aa]+"=="
             if aa==kirm[x-1][0]:
                 paper[aa]=paper[aa]+str(kirm[x][1])
-                print(paper)
             else:
                 paper[aa]=paper[aa]+"="
-                print(paper)
+        print("입력했어요")
     elif keke=="그만할랭":
         print(paper)
         for bb in range(6):
